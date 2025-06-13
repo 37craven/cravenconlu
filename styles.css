@@ -58,7 +58,7 @@ html {
 .hover-me {
     top: 5%;
     left: 45%;
-
+    z-index: 1000;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -67,6 +67,7 @@ html {
     background: transparent;
     animation: hover-me 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-iteration-count: 3;
+    animation-delay: 4s;
 }
 
 .hover-me * {
@@ -189,7 +190,25 @@ a:visited {
     align-items: center;
     cursor: pointer;
     transition: transform 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    
+    animation: bounceup 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-iteration-count: 3;
+    animation-delay: 4s;
+}
+
+@keyframes bounceup {
+    0% {
+
+    }
+    50% {
+        rotate: -8deg;
+        width: 55px;
+        height: 55px;
+        bottom: 4.5vh;
+        right: 4.5vh;
+    }
+    100% {
+
+    }
 }
 
 #mute-button:hover {
@@ -256,8 +275,8 @@ audio {
     border-radius: 4vh;
     animation: projects-container-reveal linear forwards;
     animation-timeline: view();
-    animation-range-start: 20%;
-    animation-range-end: 50%;
+    animation-range-start: 10%;
+    animation-range-end: 80%;
     overflow: hidden;
 }
 
@@ -268,11 +287,16 @@ audio {
         border-radius: 4vh;
     }
 
+    40%, 60% {
+        width: 100%;
+        height: 102vh;
+        border-radius: 0;
+    }
 
     100% {
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
+        width: 85vw;
+        height: 72.5vh;
+        border-radius: 4vh;
     }
 }
 
@@ -321,20 +345,20 @@ audio {
     align-items: center;
     flex-direction: column;
 }
-
-#contact {
-    padding: 2vh;
+.contact-section {
     box-sizing: border-box;
+    margin-top: 30vh;
+    padding: 2vh;
+    box-shadow: 0 -10px 10px 1px #00000025;
     position: absolute;
     z-index: 998;
     width: 100%;
-    height: 90vh;
-    background-color: white;
-    border-top: 20px solid #04DF7F;
+    height: 85vh;
+    background-color: #F90052;
     animation: contact-reveal ease-in-out forwards;
     animation-timeline: view();
     animation-range-start: 0%;
-    animation-range-end: 100%;
+    animation-range-end: 20%;
 }
 
 @keyframes contact-reveal {
@@ -345,7 +369,7 @@ audio {
 
     to {
 
-        transform: translateY(-70vh);
+        transform: translateY(-50vh);
 
     }
 }
@@ -395,8 +419,6 @@ audio {
 
 .cursive-container svg path {
     fill: transparent;
-    width: 1364px;
-    height: 311px;
     stroke: #04DF7F;
     stroke-width: 2;
     stroke-dasharray: 1900;
@@ -437,6 +459,7 @@ audio {
 .name-container>h1 {
     font-size: 42px;
     margin: 0;
+    
 }
 
 
@@ -786,6 +809,7 @@ audio {
     font-weight: 900;
 }
 
+
 #projects-title span:hover {
     background-size: 0% 0%;
     margin-left: 0vh;
@@ -824,7 +848,9 @@ audio {
 
 
 .project-img-placeholder>img {
+    width: 150%;
     position: absolute;
+
 }
 
 
@@ -850,7 +876,7 @@ audio {
     top: 0vh;
     left: 0vh;
     backdrop-filter: blur(10px);
-    object-fit: cover;
+    object-fit: con;
     opacity: 1;
     visibility: visible;
 }
@@ -877,7 +903,7 @@ a .title {
 
 
 
-#contact * {
+.contact-section * {
     margin: 0;
 
 }
@@ -892,7 +918,7 @@ a .title {
 .contact-title > h1 {
     font-size: 17vh;
     width: 55%;
-    color: #F90052;
+    color: #04DF7F;
 
 }
 
@@ -917,13 +943,13 @@ a .title {
 }
 
 .contact-wrapper {
-    height: 30vh;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 .contact-name > h2 {
-    color: #04DF7F;
+    color: black;
     font-size: 6.8vh;
 }
 
@@ -942,6 +968,7 @@ a .title {
 .inner-container-left a, .contact-container-right a{
     text-decoration: none;
     color: #00000050;
+    transition: .2s ease-out;
 }
 
 .inner-container-left a:hover, .contact-container-right a:hover{
@@ -961,6 +988,7 @@ form{
 }
 
 input:not(#submitbutton) {
+    background-color: #F90052;
     box-sizing: border-box;
     padding: 2.75vh 2vh;
     font-size: 2.5vh;
@@ -968,6 +996,10 @@ input:not(#submitbutton) {
     border: none;
     font-family: 'Arial Narrow', sans-serif;
     border-bottom: 2px solid #00000050;
+}
+
+input:not(#submitbutton)::placeholder {
+    color: #00000080;
 }
 
 form:first-child{
@@ -982,17 +1014,19 @@ form:first-child{
 #submitbutton {
 
     border-radius: 6px;
-    width: 25%;
-    background-color: #F90052;
+    width: 30%;
+    background-color: black;
     border: none;
     color: white;
 
-    font-size: 2vh;
-    height: 5vh;
+    font-size: 2.5vh;
+    height: 6vh;
     font-family: 'Arial Narrow', sans-serif;
+    transition: background-color .2s ease-in-out;
     
 }
 
 #submitbutton:hover{
-    background-color: #d70048;
+    background-color: #00000070;
+
 }

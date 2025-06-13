@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listless Resume</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+    <style>
+        body {
+            width: 100%;
+            background: white;
+            margin: 0;
+            color: #161615;
+            font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .resume-container {
+            padding: 4vh;
+            background-color: white;
+            border: 2px solid #F90052;
+            box-shadow: 0px 0px 50px white;
+            width: 50vw;
+            margin: 10vh;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2vh;
+        }
+        .resume-title {
+            text-align: center;
+            color: #F90052;
+            font-size: 8vh;
+            margin-top: 7vh;
+            margin-bottom: 2vh;
+            letter-spacing: 0.05em;
+            font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+        }
+        .resume-section {
+            margin-bottom: 3vh;
+        }
+        .resume-section-title {
+            color: #04DF7F;
+            font-size: 3vh;
+            font-weight: bold;
+            margin-bottom: 1.2vh;
+            font-family: inherit;
+            letter-spacing: 0.04em;
+
+            padding-left: 2vw;
+            border-left: 3px solid #04DF7F;
+            background: #04DF7F10;
+            border-radius: 0.5vh;
+        }
+        .resume-blockquote {
+            font-size: 3.5vh;
+            margin: 0 0 1.5vh 0;
+            padding-left: 2vw;
+        }
+        .resume-contact {
+            text-align: center;
+            margin-bottom: 2vh;
+            font-size: 2.2vh;
+            color: #161615;
+        }
+        .resume-contact span {
+            display: block;
+            margin-bottom: 0.5vh;
+        }
+        .resume-entry {
+            margin-bottom: 1.5vh;
+            font-size: 2.2vh;
+        }
+        .resume-entry ins {
+            color: #F90052;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link {
+            background-color: white;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5vh;
+            height: 5vh;
+            position: fixed;
+            left: 4vh;
+            top: 4vh;
+            border: 2px solid #04DF7F;
+            font-size: 4vh;
+            box-sizing: border-box;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: .2s ease-in;
+        }
+
+        .back-link:hover {
+            background-color: #04DF7F;
+        }
+
+        .back-link span {
+            font-size: 3vh;
+            color: #F90052;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            transition: .2s ease-in;
+        }
+
+        .back-link span:hover {
+            color: white;
+        }
+
+        .flower-img {
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            width: auto;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+        .flower-left {
+            left: 0;
+        }
+        .flower-right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <img class="flower-img flower-left" src="../../images/flowers-left.svg" alt="">
+    <img class="flower-img flower-right" src="../../images/flowers-right.svg" alt=""">
+    <a href="../../index.html#projects" class="back-link"><span>◀︎</span></a>
+    <div class="resume-container">
+        <h1 class="resume-title"><strong>Craven John Conlu</strong></h1>
+        <div class="resume-section">
+            <div class="resume-contact">
+                <span></span>
+                <span>3729 Apt. 3rd Street, Balibago, Angeles City, Pampanga, 2009</span>
+                <span>Contact: (+63) 991-537-0007</span>
+                <span>Email: craven.conlu@gmail.com</span>
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Objective</div>
+            <div class="resume-blockquote">
+                A motivated and passion-driven <abbr title="User Interface/User Experience">UI/UX</abbr> designer seeking an entry level position at your company.
+                Adept to learn team dynamics and company branding, willing to take on the challenges brought on by the role.
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Educational Background</div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• NU Clark</ins><br>
+                2023-2027<br>
+                Bachelor of Science in Information Technology
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Columban College Inc.</ins><br>
+                2021-2023<br>
+                Humanities and Social Sciences Strand
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• St. Joseph College Inc.</ins><br>
+                2017-2021<br>
+                Humanities and Social Sciences Strand
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Skills</div>
+            <div class="resume-blockquote resume-entry">Front-End Development</div>
+            <div class="resume-blockquote resume-entry">Design Systems</div>
+            <div class="resume-blockquote resume-entry">Branding Development</div>
+            <div class="resume-blockquote resume-entry">Communication</div>
+            <div class="resume-blockquote resume-entry">Search Engine Optimization</div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Experiences</div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• TaskUs</ins><br>
+                2026-2027<br>
+                Entry-level Intern
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• GnGn Eikawa Phils. Inc</ins><br>
+                2025-2026<br>
+                Language Assessor
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Projects</div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Spark</ins><br>
+                February 2025<br>
+                Front-End Developer/Designer
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Hapag</ins><br>
+                October 2024<br>
+                UI/UX Designer
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Soul-Fighter</ins><br>
+                April 2024<br>
+                Game/Element Design
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">Certifications</div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Magna Cum Laude</ins><br>
+                NU Clark<br>
+                June 2027
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• UIBootCamp</ins><br>
+                March 2027
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Designlab</ins><br>
+                February 2027
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• CareerFoundry</ins><br>
+                December 2026
+            </div>
+        </div>
+        <div class="resume-section">
+            <div class="resume-section-title">References</div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Jian Gabriel Arcilla</ins><br>
+                jian@gmail.com<br>
+                Colleague
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Neo Gonzales</ins><br>
+                neo@gmail.com<br>
+                Colleague
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Charles Cunanan</ins><br>
+                charles@gmail.com<br>
+                Colleague
+            </div>
+            <div class="resume-blockquote resume-entry">
+                <ins>• Renz Biag</ins><br>
+                renz@gmail.com<br>
+                Team Leader
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
