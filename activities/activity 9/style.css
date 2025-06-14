@@ -47,6 +47,7 @@ body * {
   width: 300px;
   height: 100px;
   padding: 1vh;
+  border-radius: 8px;
   background-color: #f90052;
   border: 1px solid black;
   transform: translate(50px, 100px);
@@ -56,6 +57,7 @@ body * {
 .transition {
   width: 100px;
   height: 100px;
+  border-radius: 8px;
   background: #f90052;
   transition: width 2s;
 }
@@ -67,6 +69,7 @@ body * {
 .transition2 {
   width: 100px;
   height: 100px;
+  border-radius: 8px;
   background: #04df7f;
   transition: width 2s, height 4s;
 }
@@ -80,6 +83,7 @@ body * {
   width: 100px;
   height: 100px;
   background: #f90052;
+  border-radius: 8px;
   transition: width 3s;
   transition-delay: 1s;
 }
@@ -91,6 +95,7 @@ body * {
 .transition4 {
   width: 100px;
   height: 100px;
+  border-radius: 8px;
   background: #04df7f;
   transition: width 2s, height 2s, transform 2s;
 }
@@ -483,11 +488,12 @@ body * {
   }
 }
 
+
 .showcase {
   margin: 2vh;
   box-sizing: border-box;
   height: 96vh;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.8);
   padding: 2vh;
 }
