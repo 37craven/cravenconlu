@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
+  </head>
+  <body class="navbarbody">
+    <!-- STICKY NAVBAR-->
+    <a href="../../index.html#projects" class="back-link"><span>◀︎</span></a>
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#webfont">Web Font</a></li>
+      <li><a href="#translatemethod">Transform</a></li>
+      <li><a href="#translatemethod">Translate Method</a></li>
+      <li><a href="#transition1">Transition</a></li>
+      <li><a class="indent" href="#transition1">Transition 1</a></li>
+      <li><a class="indent" href="#transition2">Transition 2</a></li>
+      <li><a class="indent" href="#transition3">Transition 3</a></li>
+      <li><a class="indent" href="#transition4">Transition 4</a></li>
+      <li><a href="#animation1">Animation</a></li>
+      <li><a class="indent" href="#animation1">Animation 1</a></li>
+      <li><a class="indent" href="#animation2">Animation 2</a></li>
+      <li><a class="indent" href="#animation3">Animation 3</a></li>
+      <li><a class="indent" href="#animation4">Animation 4</a></li>
+      <li><a class="indent" href="#animation5">Animation 5</a></li>
+      <li><a class="indent" href="#animation6">Animation 6</a></li>
+      <li><a class="indent" href="#animation7">Animation 7</a></li>
+      <li><a class="indent" href="#animation8">Animation 8</a></li>
+      <li><a class="indent" href="#animation9">Animation 9</a></li>
+      <li><a class="indent" href="#animation10">Animation 10</a></li>
+    </ul>
+    <script>
+      document.querySelectorAll(".navbar a").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          document.querySelectorAll(".navbar a").forEach(function (a) {
+            a.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <!-- STICKY NAVBAR-->
+    <div class="showcase-container">
+      <div id="home" class="showcase">
+        <h1>Welcome to the CSS Effects Showcase</h1>
+        <h3>Explore Interactive Navigation and Modern Styling</h3>
+        <p>
+          This page demonstrates a sticky navigation bar and a variety of CSS
+          techniques, including transforms, transitions, and animations. Use the
+          menu to jump between different examples and see each effect in action.
+        </p>
+        <p>
+          Scroll through the sections to discover how CSS can enhance user
+          experience and bring your web projects to life with smooth, engaging
+          interactions.
+        </p>
+      </div>
+
+      <div id="webfont" class="showcase">
+        <h1>The @font-face Rule</h1>
+
+        <div>
+          With CSS, websites can use
+          <b>fonts other than the pre-selected "web-safe" fonts</b>.
+        </div>
+      </div>
+
+      <div id="transform" class="showcase">
+        <h1>Transform Section</h1>
+        <p>
+          Scroll down to see Translate Method and Transition with its 4
+          examples.
+        </p>
+      </div>
+
+      <div id="translatemethod" class="showcase">
+        <h1>The translate() Method</h1>
+        <p>
+          The translate() method moves an element from its current position:
+        </p>
+
+        <div class="translatemethod">
+          This div element is moved 50 pixels to the right, and 100 pixels down
+          from its current position.
+        </div>
+      </div>
+
+      <div id="transition" class="showcase">
+        <h1>Transition Section</h1>
+        <p>Scroll down to see 4 examples of the transition property.</p>
+      </div>
+
+      <div id="transition1" class="showcase">
+        <h1>The transition Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+        <div class="transition"></div>
+      </div>
+      <div id="transition2" class="showcase">
+        <h1>The transition Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div class="transition2"></div>
+      </div>
+      <div id="transition3" class="showcase">
+        <h1>The transition-delay Property</h1>
+
+        <p>Hover over the div element below, to see the transition effect:</p>
+
+        <div class="transition3"></div>
+
+        <p>
+          <b>Note:</b> The transition effect has a 1 second delay before
+          starting.
+        </p>
+      </div>
+      <div id="transition4" class="showcase">
+        <h1>Transition + Transform</h1>
+
+        <p>Hover over the div element below:</p>
+        <div class="transition4"></div>
+      </div>
+
+      <div id="animation" class="showcase">
+        <h1>Animation Section</h1>
+        <p>Scroll down to see 10 examples of the animation property.</p>
+      </div>
+
+      <div id="animation1" class="showcase">
+        <h1>CSS Animation 1</h1>
+
+        <div class="animation"></div>
+
+        <p>
+          <b>Note:</b> When an animation is finished, it goes back to its
+          original style.
+        </p>
+      </div>
+      <div id="animation2" class="showcase">
+        <h1>CSS Animation 2</h1>
+
+        <div class="animation2"></div>
+
+        <p>
+          <b>Note:</b> When an animation is finished, it goes back to its
+          original style.
+        </p>
+      </div>
+      <div id="animation3" class="showcase">
+        <h1>CSS Animation 3</h1>
+
+        <div class="animation3"></div>
+
+        <p>
+          <b>Note:</b> When an animation is finished, it goes back to its
+          original style.
+        </p>
+      </div>
+      <div id="animation4" class="showcase">
+        <h1>CSS Animation 4</h1>
+
+        <p>
+          The animation-delay property specifies a delay for the start of an
+          animation. The following example has a 2 seconds delay before starting
+          the animation:
+        </p>
+
+        <div class="animation4"></div>
+      </div>
+      <div id="animation5" class="showcase">
+        <h1>CSS Animation 5</h1>
+
+        <p>
+          The animation-iteration-count property specifies the number of times
+          an animation should run. The following example will run the animation
+          3 times before it stops:
+        </p>
+
+        <div class="animation5"></div>
+      </div>
+      <div id="animation6" class="showcase">
+        <h1>CSS Animation 6</h1>
+
+        <p>
+          The animation-iteration-count property can be set to infinite to let
+          the animation run for ever:
+        </p>
+
+        <div class="animation6"></div>
+      </div>
+      <div id="animation7" class="showcase">
+        <h1>CSS Animation 7</h1>
+
+        <p>
+          The animation-timing-function property specifies the speed curve of
+          the animation. The following example shows some of the different speed
+          curves that can be used:
+        </p>
+
+        <div class="animation7" id="linear">linear</div>
+        <div class="animation7" id="ease">ease</div>
+        <div class="animation7" id="ease-in">ease-in</div>
+        <div class="animation7" id="ease-out">ease-out</div>
+        <div class="animation7" id="ease-in-out">ease-in-out</div>
+      </div>
+      <div id="animation8" class="showcase">
+        <h1>CSS Animation 8</h1>
+
+        <p>This example uses six of the animation properties:</p>
+
+        <div class="animation8"></div>
+      </div>
+      <div id="animation9" class="showcase">
+        <h1>CSS Animation 9</h1>
+
+        <p>This example uses six of the animation properties:</p>
+
+        <div class="animation9"></div>
+      </div>
+      <div id="animation10" class="showcase">
+        <h1>CSS Animation 10</h1>
+
+        <p>This example uses the shorthand animation property:</p>
+
+        <div class="animation10"></div>
+      </div>
+    </div>
+  </body>
+</html>

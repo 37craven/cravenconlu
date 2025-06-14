@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html style="background-color: black">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+      }
+      body * {
+        font-family: "Arial Narrow";
+      }
+      th {
+        width: 270px;
+        height: 55px;
+        font-size: 64px;
+        font-weight: 900;
+        padding: 12px;
+        color: #04df7f;
+        background-color: black;
+        border: 1px solid #f90052;
+        border-radius: 10px;
+      }
+      td {
+        width: 270px;
+        text-align: center;
+        font-size: 92px;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        border: 1px solid #f90052;
+        border-radius: 10px;
+      }
+      caption {
+        font-weight: 900;
+        font-size: 88px;
+        padding: 12px;
+      }
+      table {
+        border-style: initial;
+        height: 790px;
+        width: 1890px;
+        background-color: #f90052;
+        border: 8px solid #f90052;
+        border-radius: 0px;
+      }
+      a:link {
+        color: white;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #d4d4d4;
+        text-decoration: none;
+      }
+
+      .maincontainer {
+        background: #f90052;
+      }
+
+      .direccontainer > div {
+        background-color: #bd0100;
+        color: white;
+
+        font-weight: 900;
+        text-align: center;
+        font-size: 88px;
+      }
+
+      .titlecontainer {
+        padding: 6px;
+      }
+      .titlecontainer > div {
+        background-color: black;
+        color: #04df7f;
+
+        font-weight: 900;
+        text-align: center;
+        font-size: 64px;
+        border: 1px solid #f90052;
+        border-radius: 8px;
+      }
+
+      .datacontainer {
+        display: flex;
+        padding: 6px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      }
+
+      .datacontainer > div {
+        width: 16.66%;
+        text-align: center;
+        font-size: 92px;
+        font-weight: bold;
+
+        background-color: black;
+
+        border: 3px solid #f90052;
+        border-radius: 8px;
+        height: 120px;
+        text-decoration: none;
+      }
+
+      .datacontainer > div > a:link {
+        color: white;
+        text-decoration: none;
+      }
+
+      .datacontainer > div > a:visited {
+        color: #d4d4d4;
+      }
+
+      .holidaycontainer {
+        display: flex;
+        padding: 6px;
+        padding-bottom: px;
+        padding-top: 0px;
+      }
+
+      .holidaycontainer > div {
+        width: 16.66%;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: black;
+        color: black;
+        border: 3px solid #f90052;
+        border-bottom: 5px solid #f90052;
+        border-radius: 8px;
+        height: 255px;
+      }
+
+      .back-link {
+        background-color: white;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5vh;
+        height: 5vh;
+        position: fixed;
+        left: 4vh;
+        top: 4vh;
+        border: 2px solid black;
+        font-size: 4vh;
+        box-sizing: border-box;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: 0.2s ease-in;
+      }
+
+      .back-link:hover {
+        background-color: #04df7f;
+      }
+
+      .back-link span {
+        font-size: 3vh;
+        color: #f90052;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s ease-in;
+      }
+
+      .back-link span:hover {
+        color: white;
+      }
+
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="maincontainer">
+      <a href="../../index.html#projects" class="back-link"><span>◀︎</span></a>
+      <div class="direccontainer">
+        <div>YEAR 2025 DIRECTORY</div>
+      </div>
+      <div class="titlecontainer">
+        <div>MONTHS</div>
+      </div>
+
+      <div class="datacontainer">
+        <div><a href="#January"> Jan</a></div>
+        <div><a href="#February"> Feb</a></div>
+        <div><a href="#March"> Mar</a></div>
+        <div><a href="#April"> Apr </a></div>
+        <div><a href="#May"> May </a></div>
+        <div><a href="#June"> Jun </a></div>
+      </div>
+      <div class="datacontainer">
+        <div><a href="#July"> Jul </a></div>
+        <div><a href="#August"> Aug </a></div>
+        <div><a href="#September"> Sep </a></div>
+        <div><a href="#October"> Oct </a></div>
+        <div><a href="#November"> Nov </a></div>
+        <div><a href="#December"> Dec </a></div>
+      </div>
+
+      <div class="titlecontainer">
+        <div>HOLIDAYS</div>
+      </div>
+
+      <div class="holidaycontainer">
+        <div>
+          <a href="#January"> Lailatul Isra Wal Mi Raj </a> <br />
+          <a href="#January"> New Year's Day </a>
+        </div>
+        <div>
+          <a href="#February"> People Power Anniversary</a>
+        </div>
+        <div>
+          <a href="#March"> Eidul Fitar</a><br />
+          <a href="#March"> Eidul Fitar</a><br />
+          <a href="#March"> Eidul Fitar Holiday</a>
+        </div>
+        <div>
+          <a href="#April"> Day of Valor</a><br />
+          <a href="#April"> Maundy Thursday</a><br />
+          <a href="#April"> Good Friday</a><br />
+          <a href="#April"> Black Saturday</a><br />
+          <a href="#April"> Easter Sunday</a>
+        </div>
+        <div><a href="#May"> Labor Day</a><br /></div>
+        <div>
+          <a href="#June"> Eid al-Adha</a><br />
+          <a href="#June"> Eid al-Adha </a> <br />
+          <a href="#June"> Independence Day </a><br />
+          <a href="#June"> Amun Jajid</a>
+        </div>
+      </div>
+      <div class="holidaycontainer">
+        <div></div>
+        <div>
+          <a href="#August"> Ninoy Aquino Day</a><br />
+          <a href="#August"> National Heroes Day</a>
+        </div>
+        <div>
+          <a href="#September"> Maulid un-Nabi</a>
+        </div>
+        <div>
+          <a href="#October"> Special non-working Day </a>
+        </div>
+        <div>
+          <a href="#November"> All Saints' Day</a><br />
+          <a href="#November"> All Souls' Day</a><br />
+          <a href="#November"> Bonifacio Day</a>
+        </div>
+        <div>
+          <a href="#December"> Feast of the Immaculate Conception</a><br />
+          <a href="#December"> Christmas Eve</a><br />
+          <a href="#December"> Christmas Day</a><br />
+          <a href="#December"> Rizal Day</a><br />
+          <a href="#December"> New Year's Eve</a><br />
+        </div>
+      </div>
+    </div>
+    <div class="maincontainer">
+      <table id="January">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤJANUARYㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="February">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤFEBRUARYㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="March">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤMARCHㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">30</td>
+            <td>31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="April">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤAPRILㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="May">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤMAYㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="June">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤJUNEㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">29</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="July">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤJULYㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="August">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤAUGUSTㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="September">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤSEPTEMBERㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">2</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">28</td>
+            <td>29</td>
+            <td>30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="October">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤOCTOBERㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="November">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤNOVEMBERㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+
+          <tr>
+            <td style="color: #b7003d">30</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+      <table id="December">
+        <caption style="color: white; background-color: #b7003d">
+          2025ㅤㅤDECEMBERㅤㅤ2025
+        </caption>
+        <colgroup>
+          <col style="background-color: #f2f2f2" />
+          <col span="6" style="background-color: white" />
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: #b7003d"></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">2</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td style="color: #b7003d">28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+      </table>
+    </div>
+  </body>
+</html>
