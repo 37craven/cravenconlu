@@ -385,10 +385,10 @@ audio {
 }
 
 .cursive-container svg {
-  width: 70vw;
+  width: 75vw;
   height: auto;
-  max-width: 98vw;
-  max-height: 60vh;
+  max-width: 105vw;
+  max-height: 64.3vh;
   display: block;
 }
 
@@ -593,14 +593,16 @@ audio {
   margin-bottom: 2vh;
   position: relative;
   left: 10px;
+  overflow: visible;
 }
 
 .awards-title svg {
-    width: 25vw;
-    height: auto;
-    max-width: 35vw;
-    max-height: 21.375vh;
-    display: block;
+  width: 25vw;
+  height: auto;
+  max-width: 35vw;
+  max-height: 21.5vh;
+  display: block;
+  overflow: visible;
 }
 
 .awards-title svg path {
@@ -614,8 +616,6 @@ audio {
   animation-range-start: 10%;
   animation-range-end: 65%;
 }
-
-
 
 @keyframes awardsAnimation {
   0% {
