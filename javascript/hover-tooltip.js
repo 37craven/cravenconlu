@@ -1,6 +1,5 @@
 document.querySelectorAll(".tooltip").forEach((el) => {
   let tooltipSpan;
-
   el.addEventListener("mouseenter", function (e) {
     const title = el.getAttribute("title");
     if (!title) return;
@@ -12,16 +11,16 @@ document.querySelectorAll(".tooltip").forEach((el) => {
     tooltipSpan.textContent = title;
     el.appendChild(tooltipSpan);
 
-    const rect = el.getBoundingClientRect();
-    tooltipSpan.style.top = e.clientY - rect.top + -230 + "px"; // Offset down
-    tooltipSpan.style.left = e.clientX - rect.left + 300 + "px"; // Offset right
+    const rect = el.getBoundingClientRect(); /* this offsets the tooltip to the right and up */
+    tooltipSpan.style.top = e.clientY - rect.top + -230 + "px";
+    tooltipSpan.style.left = e.clientX - rect.left + 300 + "px"; 
   });
 
   el.addEventListener("mousemove", function (e) {
     if (!tooltipSpan) return;
     const rect = el.getBoundingClientRect();
-    tooltipSpan.style.top = e.clientY - rect.top + -230 + "px"; // Offset down
-    tooltipSpan.style.left = e.clientX - rect.left + 300 + "px"; // Offset right
+    tooltipSpan.style.top = e.clientY - rect.top + -230 + "px";
+    tooltipSpan.style.left = e.clientX - rect.left + 300 + "px"; 
   });
 
   el.addEventListener("mouseleave", function () {

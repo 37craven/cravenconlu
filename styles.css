@@ -64,6 +64,8 @@ html {
   text-align: center;
 }
 
+/* idle animation at the start of the page, after the hero section's
+animation to direct user's attention to it */
 @keyframes hover-me {
   0% {
     opacity: 1;
@@ -175,7 +177,9 @@ a:visited {
   animation-delay: 4s;
 }
 
-@keyframes bounceup {
+/* idle animation at the start of the page, after the hero section's
+animation to direct user's attention to it */
+@keyframes bounceup { 
   0% {
   }
   50% {
@@ -202,6 +206,8 @@ audio {
   display: none;
 }
 
+/* by using animation-timeline: scroll(), it progresses as the user scrolls through the page,
+serving as a progress bar */
 .scroll-watcher {
   width: 100%;
   height: 2px;
@@ -255,6 +261,8 @@ audio {
   overflow: hidden;
 }
 
+/* the projects-container originally appears small and rounded, to give it life and highlight it,
+i had it animated and make it span and cover the viewport of the user */
 @keyframes projects-container-reveal {
   0% {
     width: 85vw;
@@ -337,6 +345,9 @@ audio {
   animation-range-end: 20%;
 }
 
+/* to replicate the animation of the contact section sliding over the
+projects section, contact-reveal had its animation move it up faster than
+the user was scrolling, detaching it from the very bottom of the projects-section */
 @keyframes contact-reveal {
   from {
     transform: translateY(0vh);
@@ -344,29 +355,6 @@ audio {
 
   to {
     transform: translateY(-50vh);
-  }
-}
-
-#sample {
-  position: relative;
-  z-index: 998;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  border-top: 2px solid #04df7f;
-  animation: sample-reveal ease-in-out forwards;
-  animation-timeline: view();
-  animation-range-start: 0%;
-  animation-range-end: 50%;
-}
-
-@keyframes sample-reveal {
-  from {
-    transform: translateY(0px);
-  }
-
-  to {
-    transform: translateY(-1000px);
   }
 }
 
@@ -392,6 +380,9 @@ audio {
   display: block;
 }
 
+/* by having stroke-dashoffset set to 1900, the stroke becomes esentially invisible due to
+it being too big for the svg, gradually reducing it to 0 creates an outline effect, 
+adding a fill to it solidifies its impact */
 .cursive-container svg path {
   fill: transparent;
   stroke: #04df7f;
@@ -461,6 +452,7 @@ audio {
   }
 }
 
+/* two decorative flowers placed left and right */
 #flower-left {
   position: absolute;
   left: 0;
@@ -481,6 +473,10 @@ audio {
 
 /* ABOUT SECTION */
 
+/* through scroll reveal, it has the effect of filling the text with color
+from left to right as the user scrolls (done through animation-timeline: view();)
+the color is placed to the left of the span, out of sight, slowly being placed in the center
+with background-size: 100% 100% */
 .scroll-reveal span {
   filter: saturate(1.1);
   color: rgba(0, 0, 0, 0.1);
@@ -605,6 +601,8 @@ audio {
   overflow: visible;
 }
 
+/* same principle from cursive-container, only this time with
+timeline view so that the user gets a sense of control over it */
 .awards-title svg path {
   opacity: 0;
   fill: transparent;
@@ -675,6 +673,8 @@ audio {
   transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* each item has a border-bottom that expands to fill up the entire item
+with the color upon hover, the text is then turned white to provide contrast */
 .awards-list a {
   box-sizing: border-box;
   height: 10vh;
@@ -733,7 +733,9 @@ audio {
   list-style-type: none;
 }
 
-.projects-list span {
+/* background properties to position the green below the actual text, 
+background-clip makes the color not act as a background, but the actual text color */
+.projects-list span { 
   filter: saturate(1.5);
   color: rgba(255, 255, 255, 0.2);
   background-size: 100% 0%;
@@ -755,7 +757,7 @@ audio {
   margin-left: 0vh;
 }
 
-.projects-list span:hover {
+.projects-list span:hover { 
   background-size: 100% 150%;
   margin-left: 2vh;
 }
@@ -772,7 +774,8 @@ audio {
   overflow: hidden;
 }
 
-@keyframes placeholder-slideshow {
+/* idle animation for the projects section, to make the page feel more alivee */
+@keyframes placeholder-slideshow { 
   0% {
     background-image: url(images/placeholder1.gif);
   }
@@ -797,6 +800,7 @@ audio {
   transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* when user hovers over the project id, the image element with the project class will animate */
 #projects:has(#eyeofthetiger:hover) .eyeofthetiger,
 #projects:has(#listlessresume:hover) .listlessresume,
 #projects:has(#resume:hover) .resume,
@@ -810,7 +814,6 @@ audio {
   top: 0vh;
   left: 0vh;
   backdrop-filter: blur(10px);
-  object-fit: con;
   opacity: 1;
   visibility: visible;
 }
