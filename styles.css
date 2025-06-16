@@ -846,8 +846,8 @@ a .title {
 }
 
 .contact-title > h1 {
-  font-size: 17vh;
-  width: 55%;
+  font-size: 16vh;
+  width: fit-content;
   color: #04df7f;
 }
 
@@ -865,21 +865,21 @@ a .title {
 .contact-name {
   justify-content: center;
   margin-top: 2vh;
-  width: 45%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   text-align: end;
 }
 
 .contact-wrapper {
-  height: 15vh;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 .contact-name > h2 {
   color: black;
-  font-size: 6.8vh;
+  font-size: 5.5vh;
 }
 
 .contact-container-left {
